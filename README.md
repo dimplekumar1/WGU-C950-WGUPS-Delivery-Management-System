@@ -2,11 +2,37 @@
 
 ## Introduction
 
-In this project, the goal is to apply algorithms and data structures practically by addressing a real-world programming challenge. The task involves using an algorithm to effectively guide delivery trucks for the Western Governors Parcel Service (WGUPS), ensuring adherence to delivery criteria while maintaining a total travel distance within 140 miles. The project requires the creation of a Python program to manage delivery of 40 packages, some with specific conditions, using provided distance information.
+This project aims to efficiently manage the delivery of 40 packages for the Western Governors Parcel Service (WGUPS) in Salt Lake City, Utah. It involves applying algorithms and data structures to ensure on-time deliveries while keeping the total travel distance under 140 miles.
+
+## Scenario
+
+WGUPS operates with three trucks, two drivers, and 40 packages, each with specific criteria. The goal is to optimize delivery routes, adhering to constraints like maximum travel distance and specific delivery requirements.
 
 ## Algorithm Identification
 
-My program uses Nearest Neighbor algorithm for optimizing package delivery routes. This approach involves selecting the closest available package at each step of the route, effectively minimizing travel distance and time.
+I use the Nearest Neighbor algorithm to optimize package delivery routes. This algorithm selects the closest available package at each step, minimizing travel distance and time.
+
+## Development Environment
+
+- **IDE:** PyCharm 2023.1.2 (Community Edition)
+- **Python Version:** Python 3.11
+- **Operating System:** macOS Ventura (Version 13.2.1)
+- **Processor:** 2.3 GHz Dual-Core Intel Core i5
+- **Graphics:** Intel Iris Plus Graphics 640 (1536 MB)
+- **Memory:** 8GB RAM
+
+## Assumptions
+
+Key assumptions for this project:
+
+- Each truck can carry a maximum of 16 packages.
+- Trucks travel at 18 mph with infinite gas.
+- Three trucks and two drivers are available.
+- Drivers start at 8:00 a.m. with loaded trucks.
+- Delivery and loading times are instantaneous.
+- One special note is associated with a package.
+- Distances are equal regardless of direction.
+- The day ends when all 40 packages are delivered.
 
 ## Logic Comments/Pseudo-code
 
@@ -125,120 +151,54 @@ My program uses Nearest Neighbor algorithm for optimizing package delivery route
       - IF user chooses to exit THEN
         - END the program
 
-## Development Environment
-
-- IDE: PyCharm 2023.1.2 (Community Edition)
-- Python Version: Python 3.11
-- Operating System: macOS Ventura (Version 13.2.1)
-- Processor: 2.3 GHz Dual-Core Intel Core i5
-- Graphics: Intel Iris Plus Graphics 640 (1536 MB)
-- Memory: 8GB RAM
-
 ## Scalability and Adaptability
 
-The program can be enhanced for scalability and adaptability:
+This system is designed to be scalable and adaptable:
 
-- Scalability:
-  - The program can efficiently handle a growing number of packages due to its use of hash tables for package and distance data storage.
-  - Increasing the number of drivers and trucks may require minor modifications to the code.
+- **Scalability**: The program efficiently handles package growth due to its hash table data storage. Adding more trucks or drivers requires minimal code adjustments.
 
-- Adaptability:
-  - The program can adapt to different constraints, such as changes in package priorities or address updates, without significant code changes.
-  - It can be modified to accommodate more trucks and drivers, as well as different delivery criteria, with minimal adjustments.
+- **Adaptability**: The system adapts to different constraints, such as package priorities or address updates, with ease. It can be customized for more trucks, drivers, and varied delivery criteria.
 
 ## Software Efficiency and Maintainability
 
-The code is designed for efficiency and maintainability:
+The code focuses on efficiency and maintainability:
 
-- Efficient:
-  - The use of hash tables allows for quick data retrieval and updates.
-  - Code is organized into functions, promoting reusability and readability.
-  - Complex tasks are broken down into smaller functions for easier maintenance.
+- **Efficiency**: Hash tables ensure quick data retrieval, and modular code promotes reusability. Complex tasks are divided into smaller functions for easier maintenance.
 
-- Maintainable:
-  - The program is well-structured and follows consistent naming conventions,.
-  - Functions are named descriptively, making the code self-documenting.
-  - Comments provide explanations for complex logic and data structures.
-  - Error handling is implemented to ensure the program handles unexpected input gracefully.
+- **Maintainability**: The code is well-structured, follows naming conventions, and is documented with comments. Error handling ensures graceful handling of unexpected input.
 
 ## Self-Adjusting Data Structures
 
-The program utilizes hash tables as self-adjusting data structures:
+I use hash tables as self-adjusting data structures:
 
-- Hash Tables:
-  - Hash tables are used for storing package and distance data.
-  - They efficiently store and retrieve data based on keys (package IDs and distance IDs).
-  - Hash table implementations include methods for inserting, retrieving, updating, and removing data.
-
-## Hash Table Insertion Function
-
-The insertion function for hash tables takes package components (for package data) or distance components (for distance data) as input and inserts them into the respective hash table. The package ID or distance ID serves as the key for insertion.
-
-## Hash Table Look-Up Function
-
-The look-up function for hash tables takes package components (for package data) or distance components (for distance data) as input and returns the corresponding data elements based on the provided package ID or distance ID. This function efficiently retrieves data from the hash table using the key.
+- Hash tables efficiently store and retrieve data based on keys.
+- The implementations include methods for data manipulation.
 
 ## User Interface
 
-The program provides an interactive user interface for viewing the status and information of packages at any given time. It also allows users to check the total mileage traveled by all trucks.
+The program provides an interactive user interface for viewing package status and total mileage traveled by trucks.
 
-## Code Execution Screenshots
+## Strengths of the Algorithm
 
-Screenshots demonstrating the successful execution of the code without runtime errors or warnings, along with the display of the total mileage traveled by all trucks, are included in the project documentation.
+The Nearest Neighbor algorithm offers several strengths:
 
-## Justification of Core Algorithm
+1. **Efficient Route Optimization**: It optimizes routes by selecting the closest package, minimizing travel distance and time.
 
-### Strengths of the Algorithm
+2. **Responsiveness to Delivery Constraints**: The algorithm adapts to various constraints, ensuring efficient deliveries.
 
-The Nearest Neighbor algorithm used in this project offers several strengths:
+## Alternative Algorithms
 
-1. Efficient Route Optimization: The algorithm optimizes delivery routes by selecting the closest available package at each step, effectively minimizing travel distance and time.
-
-2. Responsiveness to Delivery Constraints: The algorithm adapts to various constraints, such as packages that must be delivered together or address updates, ensuring efficient deliveries.
-
-### Algorithm Verification
-
-The Nearest Neighbor algorithm meets all the project requirements, delivering all packages on time and within the mileage limit.
-
-### Alternative Algorithms
-
-Two alternative algorithms to consider for this project are:
-
-1. Dijkstra's Algorithm: This algorithm is suitable for finding the shortest path in a graph. However, it may be computationally expensive for large datasets and may not prioritize delivery constraints.
-
-2. Genetic Algorithm: Genetic algorithms are evolutionary optimization techniques. While they can provide efficient solutions, they may require more complex implementation and tuning compared to the Nearest Neighbor algorithm.
+While Nearest Neighbor is effective, alternative algorithms to consider are Dijkstra's Algorithm or Genetic Algorithm.
 
 ## What Would Be Done Differently
 
-If this project were to be redone, several improvements and modifications could be considered:
+In a future iteration, the following improvements could be considered:
 
-- Optimization of Time Complexity: The code could be optimized to reduce nested loops and improve overall time complexity.
+- **Optimization of Time Complexity**: Optimize code to reduce nested loops and improve time complexity.
 
-- Enhanced Code Modularity: The code could be further divided into smaller, reusable modules to improve maintainability.
+- **Enhanced Code Modularity**: Further divide the code into smaller, reusable modules.
 
-- Removal of Restrictions: The code could be made more flexible by removing restrictions on the number of trucks and drivers, allowing for greater adaptability.
-
-## Justification of Data Structure
-
-### Verification of Data Structure
-
-The hash table-based data structure employed in this project effectively meets all project requirements, providing efficient data retrieval and updates based on package and distance IDs. However, an increase in the number of packages may impact lookup times in worst-case scenarios.
-
-### Efficiency
-
-- Hash tables provide an average-case time complexity of O(1) for insertion, deletion, and lookup operations.
-
-- In worst-case scenarios with hash table collisions, time complexity can reach O(n), but such scenarios are unlikely to significantly impact performance in this context.
-
-### Overhead
-
-- The space complexity of the hash tables used in this project is O(n), directly influenced by the number of packages being managed.
-
-### Implications
-
-1. Increase in Number of Trucks: Adding more trucks has a linear impact on space complexity (O(n)) for the list of trucks.
-
-2. Increase in Number of Cities: Expanding the delivery area has minimal impact on lookup times, as the space complexity for the distance hash table remains O(n).
+- **Removal of Restrictions**: Make the code more flexible by removing restrictions on the number of trucks and drivers.
 
 ---
 
