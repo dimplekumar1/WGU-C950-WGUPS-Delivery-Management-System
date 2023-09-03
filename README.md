@@ -190,7 +190,7 @@ The Nearest Neighbor algorithm offers several strengths:
 
 While Nearest Neighbor is effective, alternative algorithms to consider are Dijkstra's Algorithm or Genetic Algorithm.
 
-## What Would Be Done Differently
+## What Could Be Done Differently
 
 In a future iteration, the following improvements could be considered:
 
