@@ -40,9 +40,6 @@ My program uses Nearest Neighbor algorithm for optimizing package delivery route
    - LOAD all the packages that must go on truck2.
    - LOAD all the packages that must go together on truck2.
    - LOAD remaining packages among all trucks:
-
-## C950 WGUPS Algorithm Overview
-
    - FOR each truck in the truck list
      - FOR each package in the new list
        - IF there is space in the truck
@@ -74,15 +71,11 @@ My program uses Nearest Neighbor algorithm for optimizing package delivery route
        - FIND the nearest delivery address from current location
        - FOR each package in the truck
          - IF package address matches the nearest delivery address
-           - DELIVER the package and UPDATE status
+           - DELIVER all packages with that address and UPDATE status
            - UPDATE mileage and time
            - REMOVE package from truck
            - SET current location to the delivery address
-           - FOR other packages with the same delivery address
-             - DELIVER the package and UPDATE status
-             - UPDATE mileage and time
-             - REMOVE package from truck
-             - STOP searching for packages at this address
+           - STOP searching for packages at this address
          - IF no matching package address
            - PRINT a message
            - UPDATE mileage and time for truck returning to hub after package deliveries
