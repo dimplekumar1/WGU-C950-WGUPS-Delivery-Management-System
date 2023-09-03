@@ -156,7 +156,7 @@ The code is designed for efficiency and maintainability:
   - Complex tasks are broken down into smaller functions for easier maintenance.
 
 - Maintainable:
-  - The program is well-structured and follows PEP 8 coding conventions.
+  - The program is well-structured and follows consistent naming conventions,.
   - Functions are named descriptively, making the code self-documenting.
   - Comments provide explanations for complex logic and data structures.
   - Error handling is implemented to ensure the program handles unexpected input gracefully.
